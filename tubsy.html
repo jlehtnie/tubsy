@@ -10,14 +10,13 @@ $(function () {
 
     var squares = [], 
         SIZE = 16,
-        EMPTY = "&nbsp;",
         symbol = "X",
 
     /*
      * Sets the clicked-on square to the current symbol
      */
     set = function () {
-        $(this).html(symbol);
+        $(this).html() ? $(this).html("") : $(this).html(symbol);
         console.log($(this));
     },
 
