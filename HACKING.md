@@ -1,4 +1,6 @@
-TUBSy uses Grunt [0] for automating mundane tasks.
+TUBSy uses [Grunt][] for automating mundane tasks.
+
+  [Grunt]: http://gruntjs.com
 
 Prerequisite: Node Package Manager (npm)
 
@@ -10,5 +12,3 @@ Run Grunt: `grunt`
 You should get a minimized version of tubsy.js that's called tubsy.min.js.
 
 Note! In Debian based systems, you might need to do this: `ln -s /usr/bin/nodejs /usr/bin/node`
-
-[0] http://gruntjs.com
