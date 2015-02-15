@@ -2,10 +2,10 @@
 TUBSy is a JavaScript library for generating TUBS scores.
 
 # TUBS WTF?!
-Time Unit Box System (TUBS) is a notation for events in time.
+[Time Unit Box System][TUBS] (TUBS) is a notation for events in time.
 It's used often for notating rhythm music.
 
-https://en.wikipedia.org/wiki/Time_unit_box_system
+  [TUBS]: https://en.wikipedia.org/wiki/Time_unit_box_system
 
 # Enough! Just show me.
 A nice malinke rhythm for circumcision, slow Soli, for djembe could look like this in TUBS:
