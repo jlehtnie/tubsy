@@ -5,7 +5,7 @@ $(window).load(function(){
         var symbol = "X";
 
         /*
-         * Sets the clicked-on square to the current symbol
+         * Set the clicked-on square to the current symbol
          */
         set = function () {
             $(this).html() ? $(this).html("") : $(this).html(symbol);
@@ -13,8 +13,8 @@ $(window).load(function(){
         };
 
         /*
-         * Creates and attaches the DOM elements for the board as an
-         * HTML table, assigns the indicators for each cell, and starts
+         * Create and attach the DOM elements for the board as an
+         * HTML table, assign the indicators for each cell, and start
          */
         run = function () {
             var board = $("<table border=1 cellspacing=0>");
