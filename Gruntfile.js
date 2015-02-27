@@ -12,12 +12,17 @@ module.exports = function(grunt) {
                 dest: 'out/<%= pkg.name %>.min.js'
             }
         },
+        // Copy original html-files with debug-suffix to out
         copy: {
             files: {
-                src: 'src/*.html',
+                cwd: 'src',
+                src: '*.html',
                 dest: 'out/',
                 flatten: true,
-                expand: true
+                expand: true,
+                rename: function(dest, src) {
+                    return dest + src.replace(/.html$/, ".debug.html");
+                }
             }
         }
     });
