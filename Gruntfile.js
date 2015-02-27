@@ -24,14 +24,26 @@ module.exports = function(grunt) {
                     return dest + src.replace(/.html$/, ".debug.html");
                 }
             }
-        }
+        },
+        htmlmin: {
+            tubsy: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'out/tubsy.html': 'src/tubsy.html',
+                }
+            }
+        },
     });
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'copy']);
+    grunt.registerTask('default', ['uglify', 'copy', 'htmlmin']);
 
 };
