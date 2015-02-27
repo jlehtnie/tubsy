@@ -11,13 +11,22 @@ module.exports = function(grunt) {
                 src: 'src/<%= pkg.name %>.js',
                 dest: 'out/<%= pkg.name %>.min.js'
             }
+        },
+        copy: {
+            files: {
+                src: 'src/*.html',
+                dest: 'out/',
+                flatten: true,
+                expand: true
+            }
         }
     });
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('default', ['uglify', 'copy']);
 
 };
